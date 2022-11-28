@@ -23,6 +23,7 @@ folium = "*"
 flask-jwt-extended = "*"
 geopy = "*"
 importlib-metadata = "*"
+importlib-resources = "*"
 
 [requires]
 python_version = "3.10"
