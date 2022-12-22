@@ -63,10 +63,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const resp = await fetch(
-            process.env.BACKEND_URL + "/api/signup",
-            opts
-          );
+          const resp = await fetch(process.env.BACKEND_URL + "/signup", opts);
           if (resp.status !== 200) {
             console.log("There has been some error", resp.status);
             const data = await resp.json();
@@ -95,10 +92,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const resp = await fetch(
-            process.env.BACKEND_URL + "/api/token",
-            opts
-          );
+          const resp = await fetch(process.env.BACKEND_URL + "/token", opts);
 
           if (resp.status !== 200) {
             console.log("There has been some error generating token");
@@ -130,7 +124,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/user",
+            process.env.BACKEND_URL + "/user",
             data_opts
           );
 
@@ -163,7 +157,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/user/" + id,
+            process.env.BACKEND_URL + "/user/" + id,
             data_opts
           );
 
@@ -213,7 +207,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/user/" + id,
+            process.env.BACKEND_URL + "/user/" + id,
             opts
           );
 
@@ -249,7 +243,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/user/" + id,
+            process.env.BACKEND_URL + "/user/" + id,
             opts
           );
 
@@ -313,10 +307,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const resp = await fetch(
-            process.env.BACKEND_URL + "/api/product",
-            opts
-          );
+          const resp = await fetch(process.env.BACKEND_URL + "/product", opts);
           if (resp.status !== 200) {
             console.log(
               "There has been some error creating the product",
@@ -352,7 +343,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/product/" + id,
+            process.env.BACKEND_URL + "/product/" + id,
             data_opts
           );
 
@@ -377,9 +368,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       getAllProducts: async (origin = undefined) => {
         let url;
         if (origin) {
-          url = process.env.BACKEND_URL + "/api/products/" + origin;
+          url = process.env.BACKEND_URL + "/products/" + origin;
         } else {
-          url = process.env.BACKEND_URL + "/api/products";
+          url = process.env.BACKEND_URL + "/products";
         }
         try {
           const resp = await fetch(url);
@@ -414,7 +405,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/product/" + id,
+            process.env.BACKEND_URL + "/product/" + id,
             opts
           );
 
@@ -472,7 +463,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/product/" + id,
+            process.env.BACKEND_URL + "/product/" + id,
             opts
           );
 
@@ -510,7 +501,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/favourite",
+            process.env.BACKEND_URL + "/favourite",
             opts
           );
           if (resp.status !== 200) {
@@ -547,7 +538,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/favourite/" + id,
+            process.env.BACKEND_URL + "/favourite/" + id,
             opts
           );
 
@@ -589,10 +580,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const resp = await fetch(
-            process.env.BACKEND_URL + "/api/basket",
-            opts
-          );
+          const resp = await fetch(process.env.BACKEND_URL + "/basket", opts);
           if (resp.status !== 200) {
             console.log(
               "There has been some error adding the basket item",
@@ -627,7 +615,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/basket/" + id,
+            process.env.BACKEND_URL + "/basket/" + id,
             opts
           );
 
@@ -671,7 +659,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/basket/" + id,
+            process.env.BACKEND_URL + "/basket/" + id,
             opts
           );
 
@@ -780,10 +768,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const resp = await fetch(
-            process.env.BACKEND_URL + "/api/order",
-            opts
-          );
+          const resp = await fetch(process.env.BACKEND_URL + "/order", opts);
           if (resp.status !== 200) {
             console.log(
               "There has been some error creating the order",
@@ -821,7 +806,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/user_made_orders/" + id,
+            process.env.BACKEND_URL + "/user_made_orders/" + id,
             data_opts
           );
 
@@ -852,7 +837,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/user_sold_orders/" + id,
+            process.env.BACKEND_URL + "/user_sold_orders/" + id,
             data_opts
           );
 
@@ -884,7 +869,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/order/" + id,
+            process.env.BACKEND_URL + "/order/" + id,
             data_opts
           );
 
@@ -917,7 +902,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            process.env.BACKEND_URL + "/api/image/" + id,
+            process.env.BACKEND_URL + "/image/" + id,
             data_opts
           );
 
