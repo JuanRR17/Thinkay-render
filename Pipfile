@@ -24,7 +24,6 @@ flask-jwt-extended = "*"
 geopy = "*"
 importlib-metadata = "*"
 importlib-resources = "*"
-numpy = "*"
 
 [scripts]
 start="flask run -p 3001 -h 0.0.0.0"
